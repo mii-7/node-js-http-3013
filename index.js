@@ -1,14 +1,6 @@
 'use strict';
 const http = require('http');
 const server = http.createServer((req, res) => {
-<<<<<<< Updated upstream
-  console.info('[' + new Date() + '] Requested by ' + req.connection.remoteAddress);
-  res.writeHead(200, {
-    'Content-Type': 'text/plain; charset=utf-8'
-  });
-  res.write(req.headers['user-agent']);
-  res.end();
-=======
 	const now = new Date();
 	console.info('[' + now + '] Requested by ' + req.connection.remoteAddress);
 	res.writeHead(200, {
@@ -32,7 +24,6 @@ const server = http.createServer((req, res) => {
 			break;
 	}
 	res.end();
->>>>>>> Stashed changes
 }).on('error', (e) => {
   console.error('[' + new Date() + '] Server Error', e);
 }).on('clientError', (e) => {
